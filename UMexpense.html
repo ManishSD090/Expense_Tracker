@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Expense</title>
+    <link rel="stylesheet" href="UMstyles.css">
+</head>
+<body>
+    <div class="heading"><h1>Expense Tracker</h1></div>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="UMexpense.html">Expense</a>
+        <a href="UMincome.html">Income</a>
+        <a href="UMreport.html">Report</a>
+    </div>
+
+    <form id="expense-form">
+        <h3>Expense</h3>
+        <div class="expense">
+            <input type="date" id="expense-date" required>
+            <input type="text" id="expense-description" placeholder="Description" required>
+            <label for="expense-category">Category</label>
+            <select id="expense-category" required>
+                <option value="">------</option>
+                <option value="food">Food</option>
+                <option value="travel">Travel</option>
+                <option value="shopping">Shopping</option>
+                <option value="bills">Bills</option>
+                <option value="rent">Rent</option>
+                <option value="medical">Medical</option>
+                <option value="insurance">Insurance</option>
+                <option value="education">Education</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="gifts">Gifts</option>
+                <option value="investments">Investments</option>
+                <option value="savings">Savings</option>
+                <option value="others">Others</option>
+            </select>
+            <input type="number" id="expense-amount" placeholder="Amount" required>
+            <button type="submit" id="add-expense-btn">Add Expense</button>
+        </div>
+    </form>
+
+    <script src="UMlogic.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("expense-form").addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent page reload
+                addTransaction("Expense");
+            });
+        });
+    </script>
+</body>
+</html>
