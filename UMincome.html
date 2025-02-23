@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Income</title>
+    <link rel="stylesheet" href="UMstyles.css">
+</head>
+<body>
+    <div class="heading"><h1>Expense Tracker</h1></div>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="UMexpense.html">Expense</a>
+        <a href="UMincome.html">Income</a>
+        <a href="UMreport.html">Report</a>
+    </div>
+
+    <form id="income-form">
+        <h3>Income</h3>
+        <div class="income">
+            <input type="date" id="income-date" required>
+            <input type="text" id="income-description" placeholder="Description" required>
+            <label for="income-category">Category</label>
+            <select id="income-category" required>
+                <option value="">------</option>
+                <option value="salary">Salary</option>
+                <option value="bonus">Bonus</option>
+                <option value="rent">Rent</option>
+                <option value="pension">Pension</option>
+                <option value="investments">Investments</option>
+                <option value="savings">Savings</option>
+                <option value="gifts">Gifts</option>
+                <option value="scholarships">Scholarships</option>
+                <option value="lottery">Lottery</option>
+                <option value="allowances">Allowances</option>
+                <option value="others">Others</option>
+            </select>
+            <input type="number" id="income-amount" placeholder="Amount" required>
+            <button type="button" id="add-income-btn">Add Income</button>
+        </div>
+    </form>
+
+    <script src="UMlogic.js"></script>
+</body>
+</html>
