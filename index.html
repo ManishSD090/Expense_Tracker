@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UM Expense Tracker</title>
+    <link rel="stylesheet" href="UMstyles.css">
+    <!-- Chart.js and DataLabels Plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+</head>
+<body>
+    <div class="heading"><h1>Expense Tracker</h1></div>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="UMexpense.html">Expense</a>
+        <a href="UMincome.html">Income</a>
+        <a href="UMreport.html">Report</a>
+    </div>
+
+    <label for="start-date">Start Date:</label>
+    <input type="date" id="start-date">
+    <label for="end-date">End Date:</label>
+    <input type="date" id="end-date">
+    <button onclick="applyCustomFilter()">Apply Filter</button>
+
+    <div style="width: 250px; height: 250px; margin: auto">
+        <canvas id="expenseChart"></canvas>
+    </div>
+
+    <script src="UMlogic.js"></script>
+</body>
+</html>
