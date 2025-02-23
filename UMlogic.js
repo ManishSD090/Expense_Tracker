@@ -148,7 +148,6 @@ function deleteTransaction(identifier) {
 }
 
 
-// Chart.js Implementation
 let expenseChart;
 
 function initializeChart() {
